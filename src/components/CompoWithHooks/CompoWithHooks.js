@@ -13,9 +13,11 @@ export const CompoWithHooks = () => {
   return (
     <div>
       <h1>Essential click / rerender counter!!</h1>
-      <strong>Count {count}</strong>
+      <strong>Count <span id="hooksPluginTargetSpan">{count}</span></strong>
       <hr />
-      <button onClick={() => setCount(_count => ++_count)}>increase!</button>
+      <button
+          id="hooksPluginButton"
+          onClick={() => setCount(_count => ++_count)}>increase!</button>
     </div>
   );
 };
